@@ -3,10 +3,18 @@ var logger = require('./log/log');
 var httpLogger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose');
+var config = require('./config');
 var memberRoute = require('./routes/member');
 var app = express();
+var responseHelper = require('./helper/responseHelper');
 
+
+// connect to mongo db
+mongoose.connect(config.db, { server: { socketOptions: { keepAlive: 1 } } });
+mongoose.connection.on('error', () => {
+  throw new Error(`unable to connect to database: ${config.db}`);
+});
 //setup the app
 app.use(httpLogger('dev'));
 app.use(bodyParser.json());
@@ -30,7 +38,7 @@ app.use(function(err, req, res, next) {
 
   //return the error as json
   logger.warn(`ERROR -- ${err.status} ${err.message}`);
-  res.status(err.status || 500).json(err);
+  res.status(err.status || 500).json(responseHelper.errorResponse(err));
 });
 
 module.exports = app;

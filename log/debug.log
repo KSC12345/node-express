@@ -1,3 +1,27 @@
 2016-12-29T20:04:57.269Z - info: Server listening on port 3000
 2016-12-29T20:05:16.898Z - info: find memberId: 1234
 2016-12-29T20:05:17.283Z - warn: ERROR -- 404 Not Found
+2017-01-02T18:10:21.899Z - info: Server listening on port 3000
+2017-01-02T18:10:43.563Z - warn: ERROR -- 404 Not Found
+2017-01-02T18:10:43.877Z - warn: ERROR -- 404 Not Found
+2017-01-02T18:10:58.099Z - warn: ERROR -- 404 Not Found
+2017-01-02T18:11:07.569Z - info: find memberId: 1234
+2017-01-03T18:21:06.973Z - info: Server listening on port 3000
+2017-01-03T18:21:30.468Z - info: Server listening on port 3000
+2017-01-03T18:25:15.425Z - info: find memberId: 1234
+2017-01-03T19:28:15.846Z - info: Server listening on port 3000
+2017-01-03T19:30:59.419Z - warn: ERROR -- undefined Member.get is not a function
+2017-01-03T19:40:43.965Z - info: Server listening on port 3000
+2017-01-03T19:42:05.516Z - info: Server listening on port 3000
+2017-01-03T19:42:13.211Z - warn: ERROR -- undefined Member validation failed
+2017-01-03T19:45:18.484Z - info: Server listening on port 3000
+2017-01-03T19:46:15.566Z - info: Server listening on port 3000
+2017-01-03T19:46:31.267Z - info: Server listening on port 3000
+2017-01-03T20:41:57.010Z - info: Server listening on port 3000
+2017-01-03T20:42:06.363Z - warn: ERROR -- undefined responseHelper.susuccessResponse is not a function
+2017-01-03T20:45:25.945Z - info: Server listening on port 3000
+2017-01-03T20:47:50.199Z - info: Server listening on port 3000
+2017-01-03T20:56:29.933Z - info: Server listening on port 3000
+2017-01-03T20:56:37.023Z - warn: ERROR -- 404 Not Found
+2017-01-03T20:57:21.970Z - info: Server listening on port 3000
+2017-01-03T20:57:24.492Z - warn: ERROR -- 404 Not Found

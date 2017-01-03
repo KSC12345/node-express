@@ -1,20 +1,35 @@
 var express = require('express');
 var logger = require('../log/log');
 var router = express.Router();
-
-class Member {
-  constructor() {}
-};
-class Contract {
-  constructor() {}
-};
+var Member = require('../models/member');
+var responseHelper = require('../helper/responseHelper');
 
 /* GET member by memberId */
 router.get('/members/:memberId', function(req, res, next) {
-  let member = getMember(req.params.memberId);
+  //let member = getMember(req.params.memberId);
   //logger.info('Member: ' + JSON.stringify(member));
-  res.json(member);
+
+  Member.findOne({memberId:req.params.memberId})
+      .then((member) => {
+      res.json(responseHelper.successResponse(member));
+      })
+      .catch(e => next(e));
+
 });
+
+// POST method route
+router.post('/members', function (req, res,next) {
+  const member = new Member({
+    memberId: '1234',
+    firstName: 'Jason',
+    lastName:'Shmoe'
+  });
+
+  member.save()
+    .then(savedMember => res.json(savedMember))
+    .catch(e => next(e));
+
+})
 
 function getMember(memberId) {
   logger.info(`find memberId: ${memberId}`);
