@@ -12,7 +12,7 @@ router.get('/members/:memberId', function(req, res, next) {
 
   Member.findOne({memberId:req.params.memberId})
       .then((member) => {
-      res.json(responseHelper.successResponse(member));
+      res.status(200).json(responseHelper.successResponse(member));
       })
       .catch(e => next(e));
 
@@ -26,7 +26,7 @@ router.get('/rest', function(req, res, next) {
       // parsed response body as js object
       console.log("data :: "+data);
       // raw response
-    res.json(responseHelper.successResponse(data));
+    res.status(200).json(responseHelper.successResponse(data));
   }).on('error', function (err) {
       console.log('something went wrong on the request', err.request.options);
       next(err);
@@ -43,7 +43,7 @@ router.post('/members', function (req, res,next) {
   });
 
   member.save()
-    .then(savedMember => res.json(savedMember))
+    .then(savedMember => res.status(200).json(savedMember))
     .catch(e => next(e));
 
 })
