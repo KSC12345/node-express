@@ -48,17 +48,4 @@ router.post('/members', function (req, res,next) {
 
 })
 
-function getMember(memberId) {
-  logger.info(`find memberId: ${memberId}`);
-  let m = new Member();
-  m.firstName = 'Jason';
-  m.lastName = 'Shmoe';
-  m.middleName = 'The';
-
-  let c = new Contract();
-  c.type = 'HEALTH';
-  m.defaultContract = c;
-  return m;
-}
-
 module.exports = router;

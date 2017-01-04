@@ -1,8 +1,6 @@
-console.log("ENV :: "+process.env.NODE_ENV);
 switch (process.env.NODE_ENV) {
   case 'development':
     module.exports = require('./bootstrap.development');
-
     break;
   case 'test':
     module.exports = require('./bootstrap.test');
