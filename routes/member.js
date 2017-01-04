@@ -3,6 +3,7 @@ var logger = require('../log/log');
 var router = express.Router();
 var Member = require('../models/member');
 var responseHelper = require('../helper/responseHelper');
+var client = require('../helper/restClient');
 
 /* GET member by memberId */
 router.get('/members/:memberId', function(req, res, next) {
@@ -14,6 +15,22 @@ router.get('/members/:memberId', function(req, res, next) {
       res.json(responseHelper.successResponse(member));
       })
       .catch(e => next(e));
+
+});
+
+
+/* GET member by memberId */
+router.get('/rest', function(req, res, next) {
+
+  client.get('https://jsonplaceholder.typicode.com/posts/1', function (data, response) {
+      // parsed response body as js object
+      console.log("data :: "+data);
+      // raw response
+    res.json(responseHelper.successResponse(data));
+  }).on('error', function (err) {
+      console.log('something went wrong on the request', err.request.options);
+      next(err);
+  });
 
 });
 

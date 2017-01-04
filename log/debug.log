@@ -25,3 +25,19 @@
 2017-01-03T20:56:37.023Z - warn: ERROR -- 404 Not Found
 2017-01-03T20:57:21.970Z - info: Server listening on port 3000
 2017-01-03T20:57:24.492Z - warn: ERROR -- 404 Not Found
+2017-01-04T00:21:09.937Z - info: Server listening on port 3000
+2017-01-04T00:21:24.112Z - warn: ERROR -- 404 Not Found
+2017-01-04T00:21:29.700Z - warn: ERROR -- undefined Cannot read property 'indexOf' of null
+2017-01-04T00:23:10.068Z - info: Server listening on port 3000
+2017-01-04T00:23:16.430Z - warn: ERROR -- undefined Cannot read property 'indexOf' of null
+2017-01-04T00:25:43.374Z - info: Server listening on port 3000
+2017-01-04T00:25:46.169Z - warn: ERROR -- undefined Cannot read property 'indexOf' of null
+2017-01-04T00:28:42.388Z - info: Server listening on port 3000
+2017-01-04T00:28:46.151Z - warn: ERROR -- 500 Cannot read property 'indexOf' of null
+2017-01-04T00:29:25.133Z - warn: ERROR -- 500 Cannot read property 'indexOf' of null
+2017-01-04T00:31:17.838Z - info: Server listening on port 3000
+2017-01-04T00:32:30.171Z - info: Server listening on port 3000
+2017-01-04T00:37:26.867Z - info: Server listening on port 3000
+2017-01-04T00:48:01.643Z - info: Server listening on port 3000
+2017-01-04T00:48:04.463Z - warn: ERROR -- 500 getaddrinfo ENOTFOUND jsonplaceholdjzhxjhzxjuuuujzx jsonplaceholdjzhxjhzxjuuuujzx:443
+2017-01-04T00:48:45.132Z - info: Server listening on port 3000
